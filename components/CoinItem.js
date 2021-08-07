@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const CointItem = ({ coin }) => {
+const CoinItem = ({ coin }) => {
   return (
     <View style={styles.containerItem}>
       <View style={styles.coinName}>
@@ -11,7 +11,6 @@ const CointItem = ({ coin }) => {
           <Text style={styles.textSymbol}>{coin.symbol}</Text>
         </View>
       </View>
-      //
       <View>
         <Text style={styles.textPrice}>${coin.current_price}</Text>
         <Text style={[styles.pricePercentage, coin.price_change_percentage_24h > 0 ? styles.priceUp : styles.priceDown ]}>{coin.price_change_percentage_24h}</Text>
@@ -59,4 +58,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CointItem;
+export default CoinItem;
