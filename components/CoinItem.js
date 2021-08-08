@@ -13,7 +13,7 @@ const CoinItem = ({ coin }) => {
       </View>
       <View>
         <Text style={styles.textPrice}>${coin.current_price}</Text>
-        <Text style={[styles.pricePercentage, coin.price_change_percentage_24h > 0 ? styles.priceUp : styles.priceDown ]}>{coin.price_change_percentage_24h}</Text>
+        <Text style={[styles.pricePercentage, coin.price_change_percentage_24h > 0 ? styles.priceUp : styles.priceDown ]}>{Math.round(coin.price_change_percentage_24h*100)}%</Text>
       </View>
     </View>
   );
